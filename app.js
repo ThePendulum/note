@@ -81,7 +81,7 @@ var note = function() {
     var dateNode = colorify(brackify(moment().format(config.dateFormat)), config.dateColor);
     var handleNode = colorify(brackify(handle), config.handleColor);
     var debugNode = colorify(brackify(config.debugLevels[debugLevel]), config.debugLevelColors[debugLevel]);
-    var msgsNode = colorify(JSON.stringify(msgs.join(', '), config.debugTextColors[debugLevel]));
+    var msgsNode = colorify(msgs.join(', '), config.debugTextColors[debugLevel]);
 
     console.log('%s%s%s %s', dateNode, handleNode, debugNode, msgsNode);
 };
