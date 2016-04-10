@@ -18,11 +18,7 @@ var brackify = function(value) {
     return config.brackets[0] + value + config.brackets[1];
 };
 
-var colorify = function(value, color, debugLevel) {
-    if(debugLevel) {
-        color = config.debugColors[debugLevel];
-    }
-
+var colorify = function(value, color) {
     if(color) {
         if(Array.isArray(color)) {
             return clc[color[0]][color[1]](value);
@@ -46,7 +42,7 @@ var note = function() {
         msgs = args.slice(1);
     }
 
-    if(typeof args[0] === 'string' && args[1]) {
+    if(typeof args[0] === 'string' && args[1] !== undefined) {
         handle = args[0];
         msgs = args.slice(1);
 
@@ -82,8 +78,8 @@ var note = function() {
 
     var dateNode = colorify(brackify(moment().format(config.dateFormat)), config.dateColor);
     var handleNode = colorify(brackify(handle), config.handleColor);
-    var debugNode = colorify(brackify(config.debugLevels[debugLevel]), null, debugLevel);
-    var msgsNode = colorify(msgs.join(', '), null, debugLevel);
+    var debugNode = colorify(brackify(config.debugLevels[debugLevel]), config.debugLevelColors[debugLevel]);
+    var msgsNode = colorify(msgs.join(', '), config.debugTextColors[debugLevel]);
 
     console.log(dateNode + handleNode + debugNode + ' ' + msgsNode);
 };

@@ -22,7 +22,8 @@ note.config({
     dateColor: 'green',
     brackets: ['[', ']'],
     debugLevels: ['INFO', 'WARN', 'ERRO'],
-    debugColors: ['white', 'yellow', 'redBright'],
+    debugLevelColors: ['cyanBright', 'yellowBright', 'redBright'],
+    debugTextColors: [null, 'yellowBright', 'redBright'],
     autoError: 2,
     handleLength: 6,
     handlePadding: '_',
@@ -32,11 +33,11 @@ note.config({
 });
 ```
 
-### dateColor, debugColors, handleColor
-Please consult the [cli-color documentation](https://github.com/medikoo/cli-color) for a detailed overview of all color options. To apply both a foreground and a background color, use an array specifying both, e.g. `['blue', 'bgYellow']`.
-
 ### dateFormat
 Please consult the [Moment.js documentation](http://momentjs.com/docs/#/displaying/format/) for a detailed overview of all format options.
+
+### dateColor, debugLevelColors, debugTextColors, handleColor
+Please consult the [cli-color documentation](https://github.com/medikoo/cli-color) for a detailed overview of all color options. To apply both a foreground and a background color, use an array specifying both, e.g. `['blue', 'bgYellow']`. To remove any default coloring, specify `null` or `undefined`. debugLevelColors affects the color of the debug level indicator only; debugTextColors applies to logged values.
 
 ### autoError
 Debug level to escalate to when error is detected. `false` to disable.
