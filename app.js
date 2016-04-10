@@ -83,7 +83,7 @@ var note = function() {
     var debugNode = colorify(brackify(config.debugLevels[debugLevel]), config.debugLevelColors[debugLevel]);
     var msgsNode = colorify(msgs.join(', '), config.debugTextColors[debugLevel]);
 
-    console.log(dateNode + handleNode + debugNode + ' ' + msgsNode);
+    console.log('%s%s%s %s', dateNode, handleNode, debugNode, msgsNode)
 };
 
 note.config = function(newConfig) {
