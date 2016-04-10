@@ -1,6 +1,6 @@
 {
   "name": "note-log",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Minimal logging prettifier.",
   "main": "app.js",
   "scripts": {
