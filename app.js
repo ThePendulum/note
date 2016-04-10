@@ -33,7 +33,7 @@ var colorify = function(value, color) {
 var note = function() {
     var args = Array.prototype.slice.call(arguments);
 
-    var handle = '';
+    var handle = config.defaultHandle;
     var debugLevel = 0;
     var msgs = args;
 
