@@ -1,0 +1,34 @@
+{
+  "name": "note-log",
+  "version": "2.0.0",
+  "description": "Minimal logging prettifier.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ThePendulum/note.git"
+  },
+  "keywords": [
+    "logger",
+    "logging",
+    "log",
+    "logs",
+    "timestamp",
+    "timestamps",
+    "debug",
+    "debug",
+    "level"
+  ],
+  "author": "Niels Simenon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/ThePendulum/note/issues"
+  },
+  "homepage": "https://gitlab.com/ThePendulum/note#README",
+  "dependencies": {
+    "cli-color": "^1.1.0",
+    "moment": "^2.12.0"
+  }
+}
