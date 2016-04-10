@@ -20,11 +20,13 @@ var brackify = function(value) {
 
 var colorify = function(value, color) {
     if(color) {
-        if(Array.isArray(color)) {
+        if(Array.isArray(color) && clc[color[0]] && clc[color[1]]) {
             return clc[color[0]][color[1]](value);
         }
 
-        return clc[color](value);
+        if(clc[color]) {
+            return clc[color](value);
+        }
     }
 
     return value;
