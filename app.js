@@ -63,7 +63,11 @@ var note = function() {
             return msg.stack;
         }
 
-        return msg.replace(/\r/g, '');
+        if(typeof msg === 'string') {
+            return msg.replace(/\r/g, '');
+        }
+
+        return msg;
     });
 
     if(config.handleLength > 0) {
