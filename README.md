@@ -4,7 +4,7 @@ Minimal logging prettifier for Node.js.
 ## Usage
 ### Installation
 ```sh
-npm install note-log --save`
+npm install note-log --save
 ```
 
 ### Syntax
